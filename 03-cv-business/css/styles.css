@@ -124,7 +124,7 @@ b.max-bold{ font-weight: 700; }
 	right: 0; background: rgba(0,0,0, .2); }
 
 	
-/* HEADER */
+/* HEADER */
 .intro-section .heading-wrapper{ border-radius: 5px; padding: 30px 40px 20px; margin-bottom: 50px;
 	background: #FFAD01; color: #fff; }
 
@@ -281,7 +281,7 @@ b.max-bold{ font-weight: 700; }
 .radial-progress{ position: relative; max-width: 170px; margin: 0 auto; }
 
 .radial-progress .progressbar-text{ font-size: 2.2em; font-weight: 500; 
-	padding-bottom: 25px!important; color: #FFAB00!important; }
+	padding-bottom: 25px!important; color: #00ff45!important; }
 
 .radial-progress .progressbar-text:after{ content:'%'; }
 
