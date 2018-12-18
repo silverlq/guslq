@@ -60,6 +60,23 @@ a:focus, a:active, a:hover,
 button:focus, button:active, button:hover,
 a b.light-color:hover{ text-decoration: none; color: #38d46e; }
 
+.text-link{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color:#00c343;
+}
+
+.text-link:hover{
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color:darkorange;
+}
+
+.faded {
+    color:#2f2f2f;
+    font-size:0.8em;
+}
+
 b{ font-weight: 600; }
 
 img{ width: 100%; }
@@ -80,7 +97,7 @@ b.max-bold{ font-weight: 700; }
 2. COMMONS FOR PAGE DESIGN
 --------------------------------- */
 
-.section{ padding: 100px 0 50px; }
+.section{ padding: 60px 0 40px; }
 
 .section .heading{ margin-bottom: 60px; }
 
@@ -107,7 +124,7 @@ b.max-bold{ font-weight: 700; }
 
 header{ position: absolute; top: 30px; left: 0; right: 0; z-index: 100; }
 
-header .heading-wrapper{ border-radius: 5px; padding: 30px 40px 20px; background: #38d46e; color: #fff; }
+header .heading-wrapper{ border-radius: 5px; padding: 30px 40px 20px; background: #0d0019; color: #38d46e; }
 
 header .info{ margin-bottom: 10px; }
 
@@ -116,7 +133,7 @@ header .info .icon{ float: left; font-size: 30px; }
 header .info .right-area{ margin-left: 45px; }
 
 header .downlad-btn{ padding: 15px 30px; border-radius: 4px; float: right; margin-top: 30px;
-	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); background: #3fdb75; color: #fff; 
+	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); background: #38d46e; color: #fff; 
 	-webkit-transition: all .2s ease; transition: all .2s ease; }
 
 header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: translateY(-4px); }
@@ -126,8 +143,9 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 4. INTRO SECTION
 --------------------------------- */
 
-.intro-section{ padding-top: 200px; position: relative; background-size: cover; 
-	z-index: 1;background-image: url(../../images/bkg_main.jpg); }
+.intro-section{ padding-top: 200px; position: relative;      background-size: cover;
+    background-position: center;
+	z-index: 1;background-image: url(../../images/bkg-main-bw.jpg); }
 
 .intro-section:before{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
 	right: 0; background: rgba(0,0,0, .2); }
@@ -137,7 +155,7 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 
 .intro{ padding: 0 20px; margin-top: 100px; text-align: center; background: #fff; }
 
-.intro .profile-img{ height: 200px; width: 200px; border-radius: 100px; margin: 0 auto; 
+.intro .profile-img{ height: 250px; width: 250px; border-radius: 100px; margin: 0 auto; 
 	overflow: hidden; position: relative; top: -100px; margin-bottom: -70px;  }
 
 .intro .information > li{ display: block; margin: 5px 0; }
@@ -196,12 +214,23 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 7. EXPERIENCE SECTION
 --------------------------------- */
 
-.experience-section{ background: #20033b; color: #fff; }
+.experience-section{ background: #0d0019; color: #fff; }
+	
+/* LINE PROGRESSBAR */
 
-.experience .list > li{ display: block; position: relative; margin-bottom: 10px; padding-left: 20px; }
+.experience-section .expert{ margin-top: 10px; display: inline-block; padding: 1px 25px 0; 
+	border-radius: 5px; background: #38d46e; color: #fff; }
 
-.experience .list > li:before{ content: ''; position: absolute; top: 50%; left: 0; height: 10px; 
-	width: 10px; margin-top: -5px; display: block; border-radius: 10px; border: 2px solid #fff; }
+.experience-section p{
+    color: #f4f4f4;
+}
+
+.line-progress{ position: relative; padding-bottom: 25px; }
+
+.line-progress .progressbar-text{ position: absolute; bottom: 0; right: 0; font-size: 1.1em; 
+	font-weight: 500; color: #38d46e!important; }
+
+.line-progress .progress-title{ position: absolute; bottom: 0; left: 0; color: #fff; }
 
 	
 /* ---------------------------------
@@ -224,37 +253,42 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 9. COUNTER SECTION
 --------------------------------- */
 
-.counter-section{ position: relative; padding: 100px 0 70px; background-size: cover; z-index: 1; 
-	background-image: url(../../images/slider-2-1920x600.jpg); color: #fff; }
+.counter-section{ position: relative; background-size: cover; display: table; width: 100%; z-index: 1; 
+	background-image: url(../../images/bkg-bottom.jpg); color: #fff; height:35em; }
 
 .counter-section:after{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
 	right: 0; background: rgba(0,0,0, .2); }
 
-.counter{ position: relative; }
-	
-.counter .title{ text-align: right; margin-right: 130px; }
 
-.counter .desc{ position: absolute; bottom: 4px; right: 0px; width: 110px; }
+form {
+    width: 100%;
+}
 
+form input, .content form textarea {
+    padding: 1em;
+    margin: 0.75em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
 
-/* RADIAL PREOGRESS SECTION */
+form textarea {
+    width: calc(100% - 1.5em);
+    padding: 1em;
+    min-height: 220px;
+    margin-left: 0.75em;
+    border-radius: 6px;
+}
 
+form input[type='submit'] { padding: 15px 30px; border-radius: 6px; float: right; margin-top: 7.5px;
+	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); background: #38d46e; color: #fff; 
+	-webkit-transition: all .2s ease; transition: all .2s ease; cursor: pointer;}
 
-.radial-progress{ position: relative; max-width: 200px; margin: 0 auto; }
-
-.radial-progress .progressbar-text{ font-size: 2.2em; font-weight: 500; 
-	padding-bottom: 25px!important; color: #333!important; }
-
-.radial-progress .progressbar-text:after{ content:'%'; }
-
-.radial-progress .progress-title{ position: absolute; top: 50%; left: 50%; width: 100%;
-	letter-spacing: 0; text-align: center; transform: translate(-50%, 15px); color: #777; }
-
-	
-	
+form input[type='submit']:hover{
+    background:darkorange;
+}
 /* ---------------------------------
 10. FOOTER
 --------------------------------- */
 
-.copyright{ text-align: center; padding: 30px 0; background: #20033b; }
+.copyright{ text-align: center; font-size:0.95em; padding: 30px 0; background: #0d0019; }
 
