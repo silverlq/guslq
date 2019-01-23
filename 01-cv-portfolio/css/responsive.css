@@ -39,8 +39,9 @@
 	4. INTRO SECTION
 	--------------------------------- */
 
-    header { display: none; }
+    header .heading-wrapper { display: none; }
 	.intro-section{ padding-top: 20px; }
+    header .downlad-btn {width: 140px; font-size: 15px; padding: 0.5em 1.25em; margin-top:0;}
 
 
 	/* ---------------------------------
