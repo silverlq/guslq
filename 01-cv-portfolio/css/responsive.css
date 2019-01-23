@@ -13,7 +13,7 @@
 /* Screens Resolution : 767px
 -------------------------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
-	
+    
 	/* ---------------------------------
 	1. PRIMARY STYLES
 	--------------------------------- */
@@ -39,7 +39,8 @@
 	4. INTRO SECTION
 	--------------------------------- */
 
-	.intro-section{ padding-top: 350px; }
+    header { display: none; }
+	.intro-section{ padding-top: 20px; }
 
 
 	/* ---------------------------------
@@ -51,11 +52,6 @@
 	.portfolio-section .portfolioFilter{ margin: 0px 0 10px; }
 	
 	.portfolio-section .portfolioContainer{ margin-left: 0; margin-right: 0; }
-
-	.portfolio-section .p-item{ width: 50%; padding: 0 15px 0px; }
-
-	.portfolio-section .p-item{ max-width: 400px; }
-
 	
 	/* ---------------------------------
 	8. EDUCATION SECTION
@@ -76,14 +72,12 @@
 
 	body{ font-size: 14px;  }
 	
-
-	/* ---------------------------------
-	5. PORFOLIO SECTION
-	--------------------------------- */
-	
-	.portfolio-section .p-item{ width: 100%; }
-	
 }
+
+/* Responsive portfolio */
+@media only screen and (max-width: 1300px) { .portfolio-section .p-item{ width: 25%; padding: 0 7.5px 0px; } }
+@media only screen and (max-width: 875px) { .portfolio-section .p-item{ width: 33.333%; padding: 0 7.5px 0px; } }
+@media only screen and (max-width: 575px) { .portfolio-section .p-item{ width: 50%; padding: 0 15px 0px; } }
 
 /* Screens Resolution : 479px
 -------------------------------------------------------------------------- */
