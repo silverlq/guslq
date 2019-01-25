@@ -55,7 +55,7 @@
 	
     var $caption = $('<div />', { 'id': 'fluid-caption' });
     $caption
-    .html('<h3 class="img-caption"></h3><p class="img-desc"></p><a class="img-link" href="" target="_blank">sss</a>')
+    .html('<h3 class="img-caption"></h3><p class="img-desc"></p><a class="img-link" href="" onclick="">sss</a>')
     .appendTo($('body'));
     $(document).on('click', '#fluid-caption', function(e) {
         e.preventDefault();
@@ -73,7 +73,8 @@
                 .text($img.attr('alt'))
                 .next('.img-link')
                 .text($img.attr('link_text'))
-                .attr('href',$img.attr('link_href'));
+                .attr('href',$img.attr('link_href'))
+                .attr('onclick',"window.open('"+$img.attr('link_href')+"','_blank')");
             })
             .on('closestart.fluidbox', function() {
                 $('#fluid-caption').removeClass('visible');
