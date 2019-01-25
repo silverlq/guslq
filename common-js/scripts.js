@@ -22,7 +22,7 @@
 			$container.isotope({
 				filter: '*',
 				animationOptions: {
-					duration: 750,
+					duration: 1750,
 					easing: 'linear',
 					queue: false
 				}
@@ -53,8 +53,31 @@
 	});
 	
 	
+    var $caption = $('<div />', { 'id': 'fluid-caption' });
+    $caption
+    .html('<h3 class="img-caption"></h3><p class="img-desc"></p><a class="img-link" href="" target="_blank">sss</a>')
+    .appendTo($('body'));
+    $(document).on('click', '#fluid-caption', function(e) {
+        e.preventDefault();
+    });
+    
 	if ( $.isFunction($.fn.fluidbox) ) {
-		$('a').fluidbox();
+		$('a').fluidbox()
+            .on('openend.fluidbox', function() {
+                var $img = $(this).find('img');
+                $('#fluid-caption')
+                .addClass('visible')
+                .find('.img-caption')
+                .text($img.attr('title'))
+                .next('.img-desc')
+                .text($img.attr('alt'))
+                .next('.img-link')
+                .text($img.attr('link_text'))
+                .attr('href',$img.attr('link_href'));
+            })
+            .on('closestart.fluidbox', function() {
+                $('#fluid-caption').removeClass('visible');
+            });
 	}
 	
 	var countCounterUp = 0;
