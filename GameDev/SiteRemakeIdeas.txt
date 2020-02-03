@@ -1,0 +1,36 @@
+Resume
+Geospatial Development
+	Seismic Line Mapper
+	Knickpoint Finder
+	Azimuth Finder
+	Watershed Asymmetry
+	Roughness Concentration Units
+Videogame Development
+	Shark Turf Apr 2019 Ludum Dare 44
+	Collapsing mines of LUMDOOM Aug 2018 Ludum Dare 42
+	Caribou Simulator Dec 2017 Ludum Dare 40
+	Color Wave Feb 2017 (Steam) https://steamcommunity.com/sharedfiles/filedetails/?id=860398044&fbclid=IwAR0nZuMGtKUW-o_fFIQYMVTbAIAIEN0Vp_MDb2z8Ta6pq1GZKBjgp6ycMOc
+	Color Wave Jan 2017 GGJ
+	VeilWalker June 2016 - Dec 2016 (https://twitter.com/VeilwalkerGame)
+	Monster Sauce 2016 GGJ
+	Guarani Quest 2015
+	Beef & Nugget 2014
+	Golden River December 2013
+	Beat That Dungeon - 2013 (https://www.youtube.com/watch?v=SJaxlTv9Xh0)
+	Aventuras de Myrion - January 2005
+	Pupa Fighters - October 2004
+	Guerra dos Deuses 2 - September 2004
+	BagaZooba - June 2004
+	Guerra dos Deuses - March 2003
+
+https://globalgamejam.org/users/gustavo-lopes-queiroz
+Academic Writing
+	CWD Volume
+	Mapping CWD
+	Thesis
+	Knickpoint Finder
+	Azimuth Finder
+Side Projects
+	Waldorf Wine Ads
+	Gratitude Beauty Site Mtnc
+	This website
