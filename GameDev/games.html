@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+
+   var people = [];
+
+   $.getJSON('games.json', function(data) {
+       $.each(data.games, function(i, f) {
+          var row = "<div class ='row'>" + "<h3>" + f.name + "</h3>" +
+           "<p>" + f.year + "</p>" + "</div>"
+           $(row).appendTo("#database div");
+     });
+
+   });
+
+});
+</script>
+</head>
+
+<body>
+    Test
+    <div class="container-fluid">
+       <div class="container" id= "database">
+           <div>
+           </div>
+       </div>
+
+    </div>
+</body>
+</html>
