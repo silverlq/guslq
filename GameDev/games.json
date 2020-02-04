@@ -1,0 +1,53 @@
+{
+    "games": [
+        {
+            "name": "Guerra dos Deuses",
+            "alias": "War of the Gods",
+            "year": 2003,
+            "month": 3,
+            "genre":"Japanese RPG",
+            "language": "Portuguese",
+            "engine": "RPG Maker 2003",
+            "code": "Visual Scripting",
+            "t_solo": true,
+            "t_jam":false,
+            "t_unfinished":false,
+            "description":"An evil god has betrayed and imprisioned the rest of the pantheon. The protagonist, an everyday normal kid, must defeat this rising evil before it is too late. This game is a traditional japanese RPG with turn-based combat.",
+            "commentary":"This is the first complete game I ever made and shared with friends. I was 12 years old at the time when it was finished. It is heavily inspired on games I enjoyed playing at the time, namely Final Fantasy VII and Legend of Legaia. The majority of the game logic was built-in to the game engine on which this was created, RPG Maker 2003. Most of the assets are default graphics and audio from that engine, although I modified all the graphics for the main characters in MS Paint to customize them. This little gem will always hold a special place in my heart. I remember the day when I brought it to school in a CD so that my friends could play, and the happiness I felt when they told me how they enjoyed it.",
+            "images":[
+                {"src":"GamesMedia\2003_GDD_1.png", label:"Title screen"},
+                {"src":"GamesMedia\2003_GDD_2.png", label:"Entering a castle"},
+                {"src":"GamesMedia\2003_GDD_3.png", label:"Battle screen"},
+                {"src":"GamesMedia\2003_GDD_4.png", label:"In-game cinematic"}
+            ],
+            "link_youtube":"",
+            "link_download":"GamesRelease\2003_GDD.zip",
+            "link_play":"",
+            "link_website":"",
+        },
+        {
+            "name": "BagaZooba",
+            "alias": "",
+            "year": 2004,
+            "month": 6,
+            "genre":"2D Platformer",
+            "language": "Portuguese",
+            "engine": "Game Maker",
+            "code": "Visual Scripting",
+            "t_solo": true,
+            "t_jam":false,
+            "t_unfinished":false,
+            "description":"A 2D sidescroller inspired by games like Sonic and Mario.",
+            "commentary":"This is the first complete game I ever programmed. Although I did not know how to code back then, I programmed this and many other games around that time using visual scripting (drag-and-drop logic nodes). Even though I enjoyed Japanese RPGs, which could be easily made in RPG Maker, I craved being able to make different styles of games. For this reason I moved on to Game Maker, a much more versatile game engine with a much steeper learning curve.  This game marks the first major milestone in my learning to program software.",
+            "images":[
+                {"src":"GamesMedia\2004_BagaZooba_1.png", label:"Title screen"},
+                {"src":"GamesMedia\2004_BagaZooba_2.png", label:"First level"},
+                {"src":"GamesMedia\2004_BagaZooba_3.png", label:"Second level"},
+            ],
+            "link_youtube":"",
+            "link_download":"GamesRelease\2004_BagaZooba.zip",
+            "link_play":"",
+            "link_website":"",
+        }
+    ]
+}
