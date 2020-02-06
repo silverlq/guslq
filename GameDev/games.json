@@ -3,6 +3,7 @@
         {
             "name": "Guerra dos Deuses",
             "alias": "War of the Gods",
+            "event": "",
             "year": 2003,
             "month": 3,
             "genre":"Japanese RPG",
@@ -20,14 +21,16 @@
                 {"src":"GamesMedia\\2003_GDD_3.png", "label":"Battle screen"},
                 {"src":"GamesMedia\\2003_GDD_4.png", "label":"In-game cinematic"}
             ],
+            "awards":[],
             "link_youtube":"",
             "link_download":"GamesRelease\\2003_GDD.zip",
             "link_play":"",
-            "link_website":"",
+            "link_website":""
         },
         {
             "name": "BagaZooba",
             "alias": "",
+            "event": "",
             "year": 2004,
             "month": 6,
             "genre":"2D Platformer",
@@ -42,12 +45,40 @@
             "images":[
                 {"src":"GamesMedia\\2004_BagaZooba_1.png", "label":"Title screen"},
                 {"src":"GamesMedia\\2004_BagaZooba_2.png", "label":"First level"},
-                {"src":"GamesMedia\\2004_BagaZooba_3.png", "label":"Second level"},
+                {"src":"GamesMedia\\2004_BagaZooba_3.png", "label":"Second level"}
             ],
+            "awards":[],
             "link_youtube":"",
             "link_download":"GamesRelease\\2004_BagaZooba.zip",
             "link_play":"",
-            "link_website":"",
+            "link_website":""
+        },
+        {
+            "name": "Caribou Simulator",
+            "alias": "",
+            "event": "Ludum Dare",
+            "year": 2017,
+            "month": 12,
+            "genre":"Puzzle Adventure",
+            "language": "English",
+            "engine": "Unity 3D",
+            "code": "C#",
+            "t_solo": true,
+            "t_jam":true,
+            "t_unfinished":false,
+            "description":"A cute puzzle game where you lead a caribou herd through a dangerous part of the boreal forest.",
+            "commentary":"",
+            "images":[
+                {"src":"GamesMedia\\2017_Caribou_1.jpg", "label":"Title screen"},
+                {"src":"GamesMedia\\2017_Caribou_2.jpg", "label":"First level"},
+                {"src":"GamesMedia\\2017_Caribou_3.jpg", "label":"Second level"},
+                {"src":"GamesMedia\\2017_Caribou_4.jpg", "label":"Second level"}
+            ],
+            "awards":[],
+            "link_youtube":"https://www.youtube.com/watch?v=AVop7mX4W3w",
+            "link_download":"GamesRelease\\2017_Caribou.zip",
+            "link_play":"",
+            "link_website":""
         }
     ]
 }
