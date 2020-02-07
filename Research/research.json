@@ -1,0 +1,78 @@
+{
+    "research":
+    [
+        { 
+          "type": "Article",
+          "title": "Knickpoint Finder: tool for searching geosites of relevant interest for geotourism",
+          "author": "Salamuni, E., Nascimento, E.R., Silva, P.A.H, Queiroz, G.L., Silva, G.",
+          "journal": "Boletim Paranaense de Geociências",
+          "volume": 70,
+          "pages": [200,208],
+          "year": 2013,
+          "download": "Papers//knickpoint_2013_salamuni.pdf"
+        },
+
+        { "type": "Article",
+          "title": "Evidências de determinação morfotectônica e neotectônica no relevo da Serra do Mar no estado do Paraná",
+          "author": "Nascimento, E.R., Salamuni, E., Queiroz, G.L., Silva, P.A.H., Fiori, A.P.",
+          "journal": "Revista Brasileira de Geomorfologia",
+          "volume": 14,
+          "number": 3,
+          "pages": [287,299],
+          "year": 2013,
+          "download": "Papers//evidencias_2013_nascimento.pdf"
+        },
+
+        { "type": "Article",
+          "title": "AzimuthFinder: ferramenta para a extração de dados e apoio na análise estrutural",
+          "author": "Queiroz, G.L., Salamuni, E., Nascimento, E.R.",
+          "journal": "Geologia USP. Série Científica",
+          "volume": 14,
+          "number": 1,
+          "pages": [69,80],
+          "year": 2014,
+          "download": "Papers//azimuth_2014_queiroz.pdf"
+        },
+
+        { "type": "Article",
+          "title": "Knickpoint finder: A software tool that improves neotectonic analysis",
+          "author": "Queiroz, G.L., Salamuni, E., Nascimento, E.R.",
+          "journal": "Computers & geosciences",
+          "volume": 76,
+          "pages": [80,87],
+          "year": 2015,
+          "download": "Papers//knickpoint_2015_queiroz.pdf"
+        },
+
+        { "type": "Article",
+          "title": "Mapping Coarse Woody Debris with Random Forest Classification of Centimetric Aerial Imagery",
+          "author": "Queiroz, G.L., McDermid, G.J., Castilla, G., Linke, J., Rahman, M.M.",
+          "journal": "Forests",
+          "volume": 10,
+          "number": 6,
+          "pages": [471],
+          "year": 2019,
+          "download": "Papers//mapping_2019_queiroz.pdf"
+        },
+
+        { "type": "Article",
+          "title": "Estimating Coarse Woody Debris Volume Using Image Analysis and Multispectral LiDAR",
+          "author": "Queiroz, G.L., McDermid, G.J., Linke, J., Hopkinson, C., Kariyeva, J.",
+          "journal": "Forests",
+          "volume": 11,
+          "number": 2,
+          "pages": [141],
+          "year": 2020,
+          "download": "Papers//estimating_2020_queiroz.pdf"
+        },
+        
+        { "type": "Master's thesis",
+          "title": "Remote Sensing Boreal Coarse Woody Debris",
+          "author": "Queiroz, G.L.",
+          "publisher": "University of Calgary",
+          "address": "Calgary, AB",
+          "year": 2019,
+          "download": "Papers//thesis_2019_queiroz.pdf"
+        }
+    ]
+}

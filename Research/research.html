@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Research &amp; Publications</title>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="text-center text-white pb-2 pt-5" style="background-color:#262626;">
+        <h1>Research &amp; Publications</h1>
+    </div>
+
+    <div id="importJson" class="container px-0 px-sm-2 px-md-3 px-lg-5">        
+        
+    </div>
+      
+    <br><br>
+    <div id="footer"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+         var sortByProperty = function (property) {
+            return function (x, y) {
+                return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
+            };
+         };
+         $.getJSON( "research.json", function(obj) {
+            //Turn JSON object to array
+            objArray = $(obj.research).toArray();
+            //Sort the array by year in decreasing order
+            objArray.sort(sortByProperty("year")).reverse();
+            
+            for (i = 0; i < objArray.length; i++) { item = objArray[i];
+                //Research id
+                var resId = "res_"+ i.toString();
+                // Create card container and name, main image, alias, and description.
+                $("#importJson").append("<div class='card m-3' id="+resId+"><div class='row no-gutters'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+item.title+"</h5><small>"+item.type+"</small></div><h6 class='card-subtitle mb-2'>"+item.author+"</h6><p class='card-text'></p><a href='"+item.download+"' class='card-link' target='_blank'>Download PDF</a></div></div>");
+                
+                cardText = "#"+resId+" .card-text";
+                if(item.journal){
+                    $(cardText).append("<i>"+item.journal+"</i> <b>"+item.year+"</b>, <i>"+item.volume+"</i>");
+                    if(item.number){
+                        $(cardText).append(" ("+item.number+")");
+                    }
+
+                    if(item.pages){
+                        $(cardText).append(", p. "+item.pages.toString().replace(",","-")+".");
+                    }
+                } else {
+                    if(item.publisher){
+                        $(cardText).append("<i>"+item.publisher+"</i> <b>"+item.year+"</b>, "+item.address+".");
+                    }
+                }
+                
+                
+            };
+         });
+    </script>
+  </body>
+</html>

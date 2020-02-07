@@ -12,20 +12,22 @@
             "code": "Visual Scripting",
             "t_solo": true,
             "t_jam":false,
+            "t_original":false,
             "t_unfinished":false,
             "description":"An evil god has betrayed and imprisioned the rest of the pantheon. The protagonist, an everyday normal kid, must defeat this rising evil before it is too late. This game is a traditional japanese RPG with turn-based combat.",
             "commentary":"This is the first complete game I ever made and shared with friends. I was 12 years old at the time when it was finished. It is heavily inspired on games I enjoyed playing at the time, namely Final Fantasy VII and Legend of Legaia. The majority of the game logic was built-in to the game engine on which this was created, RPG Maker 2003. Most of the assets are default graphics and audio from that engine, although I modified all the graphics for the main characters in MS Paint to customize them. This little gem will always hold a special place in my heart. I remember the day when I brought it to school in a CD so that my friends could play, and the happiness I felt when they told me how they enjoyed it.",
-            "images":[
+            "media_main":[
                 {"src":"GamesMedia\\2003_GDD_1.png", "label":"Title screen"},
                 {"src":"GamesMedia\\2003_GDD_2.png", "label":"Entering a castle"},
                 {"src":"GamesMedia\\2003_GDD_3.png", "label":"Battle screen"},
                 {"src":"GamesMedia\\2003_GDD_4.png", "label":"In-game cinematic"}
             ],
+            "media_extra":[],
             "awards":[],
-            "link_youtube":"",
-            "link_download":"GamesRelease\\2003_GDD.zip",
-            "link_play":"",
-            "link_website":""
+            "youtube":"",
+            "links":[
+                {"label":"Download", "href":"GamesRelease\\2003_GDD.zip"}
+            ]
         },
         {
             "name": "BagaZooba",
@@ -39,19 +41,21 @@
             "code": "Visual Scripting",
             "t_solo": true,
             "t_jam":false,
+            "t_original":false,
             "t_unfinished":false,
             "description":"A 2D sidescroller inspired by games like Sonic and Mario.",
             "commentary":"This is the first complete game I ever programmed. Although I did not know how to code back then, I programmed this and many other games around that time using visual scripting (drag-and-drop logic nodes). Even though I enjoyed Japanese RPGs, which could be easily made in RPG Maker, I craved being able to make different styles of games. For this reason I moved on to Game Maker, a much more versatile game engine with a much steeper learning curve.  This game marks the first major milestone in my learning to program software.",
-            "images":[
+            "media_main":[
                 {"src":"GamesMedia\\2004_BagaZooba_1.png", "label":"Title screen"},
                 {"src":"GamesMedia\\2004_BagaZooba_2.png", "label":"First level"},
                 {"src":"GamesMedia\\2004_BagaZooba_3.png", "label":"Second level"}
             ],
+            "media_extra":[],
             "awards":[],
-            "link_youtube":"",
-            "link_download":"GamesRelease\\2004_BagaZooba.zip",
-            "link_play":"",
-            "link_website":""
+            "youtube":"",
+            "links":[
+                {"label":"Download", "href":"GamesRelease\\2004_BagaZooba.zip"}
+            ]
         },
         {
             "name": "Caribou Simulator",
@@ -65,20 +69,24 @@
             "code": "C#",
             "t_solo": true,
             "t_jam":true,
+            "t_original":true,
             "t_unfinished":false,
             "description":"A cute puzzle game where you lead a caribou herd through a dangerous part of the boreal forest.",
-            "commentary":"",
-            "images":[
+            "commentary":"My <a href='https://prism.ucalgary.ca/handle/1880/111027' target='_blank'>master's thesis</a> was originally entitled <i>Remote Sensing of Coarse Woody Debris in Caribou Habitat</i>. Since the main focus of my research was on remote sensing methods and not caribou, the title ended up changing to <i>Remote Sensing Boreal Coarse Woody Debris</i>. Nevertheless, I read and researched some literature on caribou habitat in the context of Alberta's boreal forest, which is home to some of the largest oil reserves in the world. I was fascinated with the history and narratives on the decline of caribou herds in the province. It is hard not to have sympathy for these animals. If you are interested there is a great <a href='https://www.cbc.ca/natureofthings/episodes/billion-dollar-caribou'  target='_blank'>documentary by CBC</a> on caribou. Caribou Simulator was my first solo Jam experience, I got to design, produce all assets, code, and publish the game all by myself within 48h.",
+            "media_main":[
                 {"src":"GamesMedia\\2017_Caribou_1.jpg", "label":"Title screen"},
                 {"src":"GamesMedia\\2017_Caribou_2.jpg", "label":"First level"},
                 {"src":"GamesMedia\\2017_Caribou_3.jpg", "label":"Second level"},
                 {"src":"GamesMedia\\2017_Caribou_4.jpg", "label":"Second level"}
             ],
-            "awards":[],
-            "link_youtube":"https://www.youtube.com/watch?v=AVop7mX4W3w",
-            "link_download":"GamesRelease\\2017_Caribou.zip",
-            "link_play":"",
-            "link_website":""
+            "media_extra":[],
+            "awards":["Top 3% overall","Top 5% mood","Top 7% innovation, graphics and audio","(Rank out of 1038 compo games)"],
+            "youtube":"https://www.youtube.com/watch?v=AVop7mX4W3w",
+            "links":[
+                {"label":"Download", "href":"GamesRelease\\2017_Caribou.zip"},
+                {"label":"Ludum Dare", "href":"https://ldjam.com/events/ludum-dare/40/caribou-simulator"},
+                {"label":"Making-of", "href":"https://gustshark.wordpress.com/2017/12/04/caribou-simulator-my-first-ludum-dare/"}
+            ]
         }
     ]
 }

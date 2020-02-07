@@ -13,7 +13,7 @@
     <div id="header"></div>
 
     <div class="text-center text-white pb-2 pt-5" style="background-color:#262626;">
-        <h1>Game Development <sup><h2 class="badge badge-light">since 2003</h2></sup></h1>
+        <h1>gd <sup><h2 class="badge badge-light">2003</h2></sup></h1>
     </div>
 
     <div id="importJson" class="container-fluid px-0 px-sm-2 px-md-3 px-lg-5">        
@@ -28,15 +28,29 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
+         var sortByProperty = function (property) {
+            return function (x, y) {
+                return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
+            };
+         };
+         var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
          $.getJSON( "games.json", function(obj) {
-            $.each(obj.games, function(i, game) {
+             
+            //Turn JSON object to array
+            objArray = $(obj.games).toArray();
+             
+            //Sort the array by year in decreasing order
+            objArray.sort(sortByProperty("month")).reverse().sort(sortByProperty("year")).reverse();
+            
+            //$.each(obj.games, function(i, game) {
+            for (i = 0; i < objArray.length; i++) { game = objArray[i];
                 //Game id
                 var gameId = "game_"+ i.toString();
                 // Create card container and name, main image, alias, and description.
-                $("#importJson").append("<div class='card m-3' id="+gameId+"><div class='row no-gutters'><div class='col-12 col-sm-4 text-center'><img src='"+game.images[0].src+"' class='card-img mx-auto' style='max-width:250px' alt='...'></div><div class='col-sm-8'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+game.name+"</h5><small>"+game.year+"</small></div><h6 class='card-subtitle mb-2 text-muted'>"+game.alias+"</h6><p class='card-text'>"+game.description+"</p><a href='#' class='card-link'>Card link</a><a href='#' class='card-link'>Another link</a></div></div></div></div>");
+                $("#importJson").append("<div class='card m-3' id="+gameId+"><div class='row no-gutters'><div class='col-12 col-sm-4 text-center'><img src='"+game.media_main[0].src+"' class='card-img mx-auto' style='max-width:250px' alt='...'></div><div class='col-sm-8'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+game.name+"</h5><small>"+game.year+"</small></div><h6 class='card-subtitle mb-2 text-muted'>"+game.alias+"</h6><p class='card-text'>"+game.description+"</p><a href='#' class='card-link'>Card link</a><a href='#' class='card-link'>Another link</a></div></div></div></div>");
                 
                 $("#"+gameId).append("<div class='shadow-none p-3 bg-light rounded'>"+game.commentary+"</div>")
-            });
+            };
          });
     </script>
   </body>
