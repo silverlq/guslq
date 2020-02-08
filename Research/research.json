@@ -8,6 +8,7 @@
           "journal": "Boletim Paranaense de Geociências",
           "logo": "Papers//logo_ufpr.jpg",
           "volume": 70,
+          "main_author": false,
           "pages": [200,208],
           "year": 2013,
           "download": "Papers//knickpoint_2013_salamuni.pdf"
@@ -20,20 +21,23 @@
           "logo": "Papers//logo_ugb.jpg",
           "volume": 14,
           "number": 3,
+          "main_author": false,
           "pages": [287,299],
           "year": 2013,
           "download": "Papers//evidencias_2013_nascimento.pdf"
         },
 
         { "type": "Article",
-          "title": "AzimuthFinder: ferramenta para a extração de dados e apoio na análise estrutural",
+          "title": "AzimuthFinder: A software for data reading in structural geology",
           "author": "Queiroz, G.L., Salamuni, E., Nascimento, E.R.",
           "journal": "Geologia USP. Série Científica",
           "logo": "Papers//logo_usp.png",
           "volume": 14,
           "number": 1,
+          "main_author": true,
           "pages": [69,80],
           "year": 2014,
+          "crossref": "https://doi.org/10.5327/z1519-874x201400010005",
           "download": "Papers//azimuth_2014_queiroz.pdf"
         },
 
@@ -43,8 +47,10 @@
           "journal": "Computers & geosciences",
           "logo": "Papers//logo_elsevier.gif",
           "volume": 76,
+          "main_author": true,
           "pages": [80,87],
           "year": 2015,
+          "crossref": "https://doi.org/10.1016/j.cageo.2014.11.004",
           "download": "Papers//knickpoint_2015_queiroz.pdf"
         },
 
@@ -55,8 +61,10 @@
           "logo": "Papers//logo_forests.webp",
           "volume": 10,
           "number": 6,
+          "main_author": true,
           "pages": [471],
           "year": 2019,
+          "crossref": "https://doi.org/10.3390/f10060471",
           "download": "Papers//mapping_2019_queiroz.pdf"
         },
 
@@ -67,8 +75,10 @@
           "logo": "Papers//logo_forests.webp",
           "volume": 11,
           "number": 2,
+          "main_author": true,
           "pages": [141],
           "year": 2020,
+          "crossref": "https://doi.org/10.3390/f11020141",
           "download": "Papers//estimating_2020_queiroz.pdf"
         },
         
@@ -78,7 +88,9 @@
           "publisher": "University of Calgary",
           "logo": "Papers//logo_ucalgary.jpg",
           "address": "Calgary, AB",
+          "main_author": true,
           "year": 2019,
+          "crossref": "http://hdl.handle.net/1880/111027",
           "download": "Papers//thesis_2019_queiroz.pdf"
         }
     ]

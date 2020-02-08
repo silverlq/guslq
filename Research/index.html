@@ -7,18 +7,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
+    <!-- My CSS -->
+    <link rel="stylesheet" href="..\common-css\guslq.css">
     <title>Research &amp; Publications</title>
   </head>
-  <body>
+  <body class="bkg-wavy">
     <div id="header"></div>
 
-    <div class="text-center text-white pb-2 pt-5" style="background-color:#262626;">
+    <div class="pageHeader text-center text-white">
         <h1>Research &amp; Publications</h1>
     </div>
+    
+    <div id="importJson" class="container pt-3 px-0 px-sm-2 px-md-3 px-lg-5">        
 
-    <div id="importJson" class="container px-0 px-sm-2 px-md-3 px-lg-5">        
-        
     </div>
+    
       
     <br><br>
     <div id="footer"></div>
@@ -39,14 +43,28 @@
             //Sort the array by year in decreasing order
             objArray.sort(sortByProperty("year")).reverse();
             
-            for (i = 0; i < objArray.length; i++) { item = objArray[i];
-                //Research id
-                var resId = "res_"+ i.toString();
-                // Create card container and name, main image, alias, and description.
-                $("#importJson").append("<div class='card m-3' id="+resId+"><div class='row no-gutters'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+item.title+"</h5><small>"+item.type+"</small></div><div class='row'><div class='col'><h6 class='card-subtitle mb-2'>"+item.author+"</h6><p class='card-text'></p><a href='"+item.download+"' class='card-link' target='_blank'>Download PDF</a></div><div style='max-width: 70px; height: 100%; margin-bottom: 0px;'><img src ='"+item.logo+"' style='width: 100%; height:auto; vertical-align:bottom;border:0;'></div></div></div>");
+            for (i = 0; i < objArray.length; i++) { 
+                item = objArray[i];
                 
+                //Card id
+                var resId = "res_"+ i.toString();
+                
+                // Create card container and type, title, and authors.
+                $("#importJson").append("<div class='card m-3 shadow' id="+resId+"><div class='row no-gutters' style='height:100%;'><div class='stripe stripe"+item.type.substring(0, 3)+"'></div><div class='col'><div class='card-body'><small>"+item.type+"</small><h5 class='card-title'>"+item.title+"</h5><h6 class='card-subtitle mb-2'>"+item.author+"</h6><p class='card-text'></p><div class='row buttonrow'></div></div></div></div></div>");
+                
+                //Add lead author tag
+                if(item.main_author){
+                    $("#"+resId+" h6").append(" <span class='badge badge-pill badge-secondary'>Lead</span>");
+                }                                   
+                
+                //Add image to top-right corner of card                                    
+                $("#"+resId+" .no-gutters").append("<div class='cornerLogo'><img src ='"+item.logo+"'></div>");
+                
+                                                   
+                //Handle citation
                 cardText = "#"+resId+" .card-text";
                 if(item.journal){
+                    //If journal, add year and volume
                     $(cardText).append("<i>"+item.journal+"</i> <b>"+item.year+"</b>, <i>"+item.volume+"</i>");
                     if(item.number){
                         $(cardText).append(" ("+item.number+")");
@@ -57,11 +75,16 @@
                     }
                 } else {
                     if(item.publisher){
+                        //If not journal, add publisher and address
                         $(cardText).append("<i>"+item.publisher+"</i> <b>"+item.year+"</b>, "+item.address+".");
                     }
                 }
-                
-                
+                                                   
+                //Add buttons
+                $("#"+resId+" .buttonrow").append("<a href='"+item.download+"' class='card-link' target='_blank'>PDF</a>");
+                if(item.crossref){
+                    $("#"+resId+" .buttonrow").append("<a href='"+item.crossref+"' class='card-link' target='_blank'>DOI</a>");
+                }
             };
          });
     </script>
