@@ -47,3 +47,39 @@
     padding-top: 50px;
     padding-bottom: 30px;
 }
+
+.moreText {
+    display: none;
+}
+
+.moreBtn:focus, .moreBtn:active {
+   box-shadow: none;
+}
+
+.mainGameImg {
+    width: 100%;
+    height:150px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mainGameImg img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;    
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .mainGameImg {
+        width:250px;
+        height:250px;
+        border-radius: 50%;
+        margin: 20px;
+    }
+    .mainGameImg img{
+        min-height:100%;
+        max-width: 100%;
+        width:auto;
+    }
+}

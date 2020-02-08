@@ -19,7 +19,7 @@
         <h1>Game Development History</h1>
     </div>
 
-    <div id="importJson" class="container-fluid px-0 px-sm-2 px-md-3 px-lg-5">        
+    <div id="importJson" class="container pt-3 px-0 px-sm-2 px-md-3 px-lg-5">        
         
     </div>
       
@@ -36,6 +36,27 @@
                 return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
             };
          };
+        
+         function getPosition(string, subString, index) {
+            return string.split(subString, index).join(subString).length;
+         }
+        
+         function readMore(moreId) {
+              var dots = document.getElementById("moreDots_"+moreId);
+              var moreText = document.getElementById("moreText_"+moreId);
+              var btnText = document.getElementById("moreBtn_"+moreId);
+             
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+              }
+         }
+        
          var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
          $.getJSON( "games.json", function(obj) {
              
@@ -46,13 +67,35 @@
             objArray.sort(sortByProperty("month")).reverse().sort(sortByProperty("year")).reverse();
             
             //$.each(obj.games, function(i, game) {
-            for (i = 0; i < objArray.length; i++) { game = objArray[i];
+            for (i = 0; i < objArray.length; i++) { 
+                game = objArray[i];
                 //Game id
                 var gameId = "game_"+ i.toString();
                 // Create card container and name, main image, alias, and description.
-                $("#importJson").append("<div class='card m-3' id="+gameId+"><div class='row no-gutters'><div class='col-12 col-sm-4 text-center'><img src='"+game.media_main[0].src+"' class='card-img mx-auto' style='max-width:250px' alt='...'></div><div class='col-sm-8'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+game.name+"</h5><small>"+game.year+"</small></div><h6 class='card-subtitle mb-2 text-muted'>"+game.alias+"</h6><p class='card-text'>"+game.description+"</p><a href='#' class='card-link'>Card link</a><a href='#' class='card-link'>Another link</a></div></div></div></div>");
+                $("#importJson").append("<div class='card m-3 shadow' id="+gameId+"><div class='row no-gutters'><div class='mainGameImg'><img src='"+game.media_main[0].src+"'></div><div class='col'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+game.name+"</h5><small>"+months[game.month-1]+" "+game.year+"</small></div><h6 class='card-subtitle mb-2 text-muted'>"+game.alias+"</h6><p class='card-text'>"+game.description+"</p><a href='#' class='card-link'>Card link</a><a href='#' class='card-link'>Another link</a></div></div></div></div>");
                 
-                $("#"+gameId).append("<div class='shadow-none p-3 bg-light rounded'>"+game.commentary+"</div>")
+                
+                var str = "";
+                var period_pos = 0;
+                while(str.length<100 && str.length< game.commentary.length){
+                    period_pos += 1;
+                    str = game.commentary.substring(0, getPosition(game.commentary,". ",period_pos));
+                }
+                if( str.length< game.commentary.length ){
+                    //Create read more... interface if text is long enough.
+                    iStr = i.toString();
+                    btnId = "moreBtn_"+iStr;
+                    dotsId = "moreDots_"+iStr;
+                    textId = "moreText_"+iStr;
+                    moreText = game.commentary.substring(str.length,game.commentary.length);
+                    comment = str + "<span class='moreDots' id='"+dotsId+"'>...</span><span class='moreText' id='"+textId+"'>"+moreText+"</span> <button class='moreBtn btn btn-outline-info btn-sm' onclick='readMore("+i.toString()+")' id='"+btnId+"'>Read more</button>";
+                }
+                else
+                {
+                    comment = game.commentary;
+                }
+                
+                $("#"+gameId).append("<div class='shadow-none p-3 bg-light rounded'>"+comment+"</div>")
             };
          });
     </script>
