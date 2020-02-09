@@ -62,6 +62,7 @@
              
             //Turn JSON object to array
             objArray = $(obj.games).toArray();
+            tagArray = $(obj.tags).toArray();
              
             //Sort the array by year in decreasing order
             objArray.sort(sortByProperty("month")).reverse().sort(sortByProperty("year")).reverse();
@@ -72,9 +73,39 @@
                 //Game id
                 var gameId = "game_"+ i.toString();
                 // Create card container and name, main image, alias, and description.
-                $("#importJson").append("<div class='card m-3 shadow' id="+gameId+"><div class='row no-gutters'><div class='mainGameImg'><img src='"+game.media_main[0].src+"'></div><div class='col'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+game.name+"</h5><small>"+months[game.month-1]+" "+game.year+"</small></div><h6 class='card-subtitle mb-2 text-muted'>"+game.alias+"</h6><p class='card-text'>"+game.description+"</p><a href='#' class='card-link'>Card link</a><a href='#' class='card-link'>Another link</a></div></div></div></div>");
+                $("#importJson").append("<div class='card m-3 shadow' id="+gameId+"><div class='row no-gutters'><div class='mainGameImg'><img src='"+game.media_main[0].src+"'></div><div class='col'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title'>"+game.name+"</h5><small>"+months[game.month-1]+" "+game.year+"</small></div><h6 class='card-subtitle mb-2 text-muted'>"+game.genre+"</h6><p class='card-text'>"+game.description+"</p><div class='mediaRow row'></div></div></div></div></div>");
                 
+                //Add tags
+                if(game.tags){
+                    for(j = 0; j < game.tags.length; j++){
+                        for(k = 0; k< tagArray.length; k++){
+                            var tag = tagArray[k];
+                            if(game.tags[j] == tag.label){
+                                $("#"+gameId+" h6").append(" <span id= 'tag_"+gameId+"_"+j.toString()+"' class='badge badge-dark' style=' background-color: "+tag.color+";' data-toggle='tooltip' title='"+tag.description.replace("#EVENT#",game.event)+"' data-placement='right''>"+tag.label+"</span>");
+                                $("#tag_"+gameId+"_"+j.toString()).tooltip()
+                                break;
+                            }
+                        }
+                    }
+                }
                 
+                //Add game alias if any
+                if(game.alias){
+                    $("#"+gameId+" .card-title").append(" <small><span class='text-muted'>("+game.alias+")</span></small>");
+                }
+                
+                //Add game media images
+                for(j = 1; j < game.media_main.length; j++){
+                    media = game.media_main[j];
+                    $("#"+gameId+" .mediaRow").append("<div class='mediaCircle'><img src='"+media.src+"' alt='"+media.label+"'></div>");
+                }
+                
+                for(j = 0; j < game.links.length; j++){
+                    link = game.links[j];
+                    $("#"+gameId+" .card-body").append("<a href='"+link.href+"' class='card-link'>"+link.label+"</a>");
+                }
+                
+                //Add commentary section with variable length before the ...ReadMore button
                 var str = "";
                 var period_pos = 0;
                 while(str.length<100 && str.length< game.commentary.length){
@@ -94,10 +125,10 @@
                 {
                     comment = game.commentary;
                 }
-                
-                $("#"+gameId).append("<div class='shadow-none p-3 bg-light rounded'>"+comment+"</div>")
-            };
-         });
+                //Add commentary text to div
+                $("#"+gameId).append("<div class='shadow-none p-3 bg-light rounded'>"+comment+"</div>");
+            }
+         })
     </script>
   </body>
 </html>

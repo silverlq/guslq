@@ -63,11 +63,28 @@
     overflow: hidden;
 }
 
-.mainGameImg img{
+.mainGameImg img, .mediaCircle img{
     object-fit: cover;
-    width: 100%;
-    height: auto;    
+    min-width: 100%;
+    max-width: 100%;
+    min-height:100%;
     margin: 0;
+}
+
+.mediaCircle{
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 1px 1px 6px 1px silver;
+}
+
+.mediaRow{
+    margin: 5px;
+    text-align: center;
+    padding: auto;
 }
 
 @media (min-width: 768px) {
@@ -76,10 +93,19 @@
         height:250px;
         border-radius: 50%;
         margin: 20px;
+        border-style: solid;
+        border-width: 6px;
+        border-color: white;
+        box-shadow: 4px 6px 12px 0px #999999;
     }
     .mainGameImg img{
         min-height:100%;
         max-width: 100%;
         width:auto;
+    }
+    .mediaCircle{
+        width:120px;
+        height:120px;
+        border-radius: 0%;
     }
 }
