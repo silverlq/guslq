@@ -34,7 +34,7 @@
             "engine": "RPG Maker 2003",
             "code": "Visual Scripting",
             "tags": ["solo"],
-            "description":"A traditional japanese RPG with a high-fantasy setting and turn-based combat.",
+            "description":"Traditional japanese RPG with a high-fantasy setting and turn-based combat.",
             "commentary":"This is the first complete game I ever made and shared with friends. I was 12 years old at the time when it was finished. It is heavily inspired on games I enjoyed playing at the time, namely Final Fantasy VII and Legend of Legaia. The majority of the game logic was built-in to the game engine on which this was created, RPG Maker 2003. Most of the assets are default graphics and audio from that engine, although I modified all the graphics for the main characters in MS Paint to customize them. This little gem will always hold a special place in my heart. I remember the day when I brought it to school in a CD so that my friends could play, and the happiness I felt when they told me how they enjoyed it.",
             "media_main":[
                 {"src":"GamesMedia\\2003_GDD_1.png", "label":"Title screen"},
@@ -59,7 +59,7 @@
             "engine": "Game Maker",
             "code": "Visual Scripting",
             "tags": ["solo"],
-            "description":"A 2D sidescroller inspired by games like Sonic and Mario.",
+            "description":"2D sidescroller inspired by games like Sonic and Mario.",
             "commentary":"This is the first complete game I ever programmed. Although I did not know how to code back then, I programmed this and many other games around that time using visual scripting (drag-and-drop logic nodes). Even though I enjoyed Japanese RPGs, which could be easily made in RPG Maker, I craved being able to make different styles of games. For this reason I moved on to Game Maker, a much more versatile game engine with a much steeper learning curve.  This game marks the first major milestone in my learning to program software.",
             "media_main":[
                 {"src":"GamesMedia\\2004_BagaZooba_1.png", "label":"Title screen"},
@@ -83,7 +83,7 @@
             "engine": "Unity 3D",
             "code": "C#",
             "tags": ["solo","jam","original"],
-            "description":"A cute puzzle game where you lead a caribou herd through a dangerous part of the boreal forest.",
+            "description":"Cute puzzle game where you lead a caribou herd through a dangerous part of the boreal forest.",
             "commentary":"My <a href='https://prism.ucalgary.ca/handle/1880/111027' target='_blank'>master's thesis</a> was originally entitled <i>Remote Sensing of Coarse Woody Debris in Caribou Habitat</i>. Since the main focus of my research was on remote sensing methods and not caribou, the title ended up changing to <i>Remote Sensing Boreal Coarse Woody Debris</i>. Nevertheless, I read and researched some literature on caribou habitat in the context of Alberta's boreal forest, which is home to some of the largest oil reserves in the world. I was fascinated with the history and narratives on the decline of caribou herds in the province. It is hard not to have sympathy for these animals. If you are interested there is a great <a href='https://www.cbc.ca/natureofthings/episodes/billion-dollar-caribou'  target='_blank'>documentary by CBC</a> on caribou. Caribou Simulator was my first solo Jam experience, I got to design, produce all assets, code, and publish the game all by myself within 48h.",
             "media_main":[
                 {"src":"GamesMedia\\2017_Caribou_1.jpg", "label":"Title screen"},
@@ -101,8 +101,32 @@
             "youtube":"https://www.youtube.com/watch?v=AVop7mX4W3w",
             "links":[
                 {"label":"Download", "href":"GamesRelease\\2017_Caribou.zip"},
-                {"label":"Ludum Dare", "href":"https://ldjam.com/events/ludum-dare/40/caribou-simulator"},
+                {"label":"Jam Page", "href":"https://ldjam.com/events/ludum-dare/40/caribou-simulator"},
                 {"label":"Making-of", "href":"https://gustshark.wordpress.com/2017/12/04/caribou-simulator-my-first-ludum-dare/"}
+            ]
+        },
+        {
+            "name": "Beat That Dungeon",
+            "alias": "",
+            "event": "Global Game Jam",
+            "year": 2013,
+            "month": 1,
+            "genre":"Puzzle Arcade",
+            "language": "English",
+            "engine": "Game Maker",
+            "code": "GML",
+            "tags": ["jam","original"],
+            "description":"Fast-paced dungeon-crawling puzzle game where each heartbeat brings surrounding walls closer to crushing you.",
+            "commentary":"The first game developed by Electric Game Sauce, an indie game development group me and some of my close friends founded during our first Global Game Jam on 2013. My first jam experience was incredible. The jam was hosted at a university in Curitiba (Brazil), with 250 attendees and a total of 50 developed games over the course of 40 hours. We were young and full of energy, willing to work non-stop for many hours with almost no time for sleep or rest. Me and my friends learned much both in terms of production and team-work. We were very pleased with the end result and got lots of positive feedback during playtesting after the event.",
+            "media_main":[
+                {"src":"GamesMedia\\2013_BTD_2.png", "label":"Opening cutscene"},
+                {"src":"GamesMedia\\2013_BTD_3.png", "label":"First level"}
+            ],
+            "media_extra":[],
+            
+            "youtube":"https://www.youtube.com/watch?v=SJaxlTv9Xh0",
+            "links":[
+                {"label":"Jam Page", "href":"http://2013.globalgamejam.org/2013/beat-dungeon"}
             ]
         }
     ]

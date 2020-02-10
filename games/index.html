@@ -61,8 +61,8 @@
         
          function openMediaModal(modId,carId,mediaId){
              console.log(modId+","+carId+","+mediaId);
-             $('#'+carId).carousel(parseInt(mediaId));
              $('#'+modId).modal('show'); 
+             $('#'+carId).carousel(parseInt(mediaId));
          }
         
          var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -110,17 +110,22 @@
                 //Loop through media of each game
                 for(j = 0; j < game.media_main.length; j++){
                     media = game.media_main[j];
+                    var active = "";
+                    if (j==0){
+                        active = " active";
+                    }
                     //Add the indicator button
-                    $("#"+carId+" .carousel-indicators").append("<li data-target='#"+carId+"' data-slide-to='"+j.toString+"'></li>");
+                    $("#"+carId+" .carousel-indicators").append("<li data-target='#"+carId+"' data-slide-to='"+j.toString()+"' class='"+active+"'></li>");
+                    
                     //Add the media and the label
-                    $("#"+carId+" .carousel-inner").append("<div class='carousel-item'><img class='d-block w-100' src='"+media.src+"' alt='Game Media'><div class='carousel-caption d-none d-md-block'><h6>"+media.label+"</h6></div></div>");
+                    $("#"+carId+" .carousel-inner").append("<div class='carousel-item"+active+"'><img class='d-block w-100' src='"+media.src+"' alt='Game Media'><div class='carousel-caption d-none d-md-block'><h6>"+media.label+"</h6></div></div>");
                     
                 }
                 
                 //Add game media images
                 for(j = 1; j < game.media_main.length; j++){
                     media = game.media_main[j];
-                    $("#"+gameId+" .mediaRow").append("<button style='border:none;' onclick='openMediaModal(\""+modId+"\",\""+carId+"\",\""+j.toString+"\")'><div class='mediaCircle'><img src='"+media.src+"' alt='"+media.label+"'></div></button>");
+                    $("#"+gameId+" .mediaRow").append("<button style='border:none;' onclick='openMediaModal(\""+modId+"\",\""+carId+"\",\""+j.toString()+"\")'><div class='mediaCircle'><img src='"+media.src+"' alt='"+media.label+"'></div></button>");
                 }
                 
                 for(j = 0; j < game.links.length; j++){
