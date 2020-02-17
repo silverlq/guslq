@@ -29,6 +29,7 @@
             "event": "",
             "year": 2003,
             "month": 3,
+            "authors": [{"name":"Gus LQ", "role":"Lead Developer"}],
             "genre":"Japanese RPG",
             "language": "Portuguese",
             "engine": "RPG Maker 2003",
@@ -54,6 +55,7 @@
             "event": "",
             "year": 2004,
             "month": 6,
+            "authors": [{"name":"Gus LQ", "role":"Lead Developer"}],
             "genre":"2D Platformer",
             "language": "Portuguese",
             "engine": "Game Maker",
@@ -78,6 +80,7 @@
             "event": "Ludum Dare",
             "year": 2017,
             "month": 12,
+            "authors": [{"name":"Gus LQ", "role":"Lead Developer"}],
             "genre":"Puzzle Adventure",
             "language": "English",
             "engine": "Unity 3D",
@@ -98,7 +101,7 @@
                 "awards":[
                     "Top 3% overall","Top 5% mood","Top 7% innovation, graphics and audio"]
             },
-            "youtube":"https://www.youtube.com/watch?v=AVop7mX4W3w",
+            "youtube":"AVop7mX4W3w",
             "links":[
                 {"label":"Download", "href":"GamesRelease\\2017_Caribou.zip"},
                 {"label":"Jam Page", "href":"https://ldjam.com/events/ludum-dare/40/caribou-simulator"},
@@ -111,6 +114,12 @@
             "event": "Global Game Jam",
             "year": 2013,
             "month": 1,
+            "authors": [
+                {"name":"Gus LQ", "role":"Programmer"},
+                {"name":"Caio Cardoso", "role":"Artist"},
+                {"name":"Felipe Melo", "role":"Level Designer"},
+                {"name":"Leandro Navarro", "role":"Audio Designer"}
+            ],
             "genre":"Puzzle Arcade",
             "language": "English",
             "engine": "Game Maker",
@@ -124,7 +133,7 @@
             ],
             "media_extra":[],
             
-            "youtube":"https://www.youtube.com/watch?v=SJaxlTv9Xh0",
+            "youtube":"SJaxlTv9Xh0",
             "links":[
                 {"label":"Jam Page", "href":"http://2013.globalgamejam.org/2013/beat-dungeon"}
             ]

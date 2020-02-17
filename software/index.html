@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
+    <!-- My CSS -->
+    <link rel="stylesheet" href="..\common-css\guslq.css">
+    <title>Software</title>
+  </head>
+  <body class="bkg-wavy">
+    <div id="header"></div>
+
+    <div class="pageHeader text-center text-white">
+        <h1>Software Development History</h1>
+    </div>
+
+    <div id="importJson" class="container pt-3 px-0 px-sm-2 px-md-3 px-lg-5">        
+        
+    </div>
+      
+    <br><br>
+
+    <div id="footer"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+         var sortByProperty = function (property) {
+            return function (x, y) {
+                return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
+            };
+         };
+        
+         function getPosition(string, subString, index) {
+            return string.split(subString, index).join(subString).length;
+         }
+        
+         function addMediaThumb(mediaObj) {
+             var src = "";
+             if(mediaObj.type == "youtube"){
+                 src = "https://img.youtube.com/vi/"+mediaObj.src+"/sddefault.jpg";
+             }
+             else {
+                 src = mediaObj.src;
+             }
+             return "<img src='"+src+"' alt='"+mediaObj.label+"'>";
+         }
+        
+        function addMedia(mediaObj) {
+             if(mediaObj.type == "youtube"){
+                 var src = "https://www.youtube.com/watch?v="+mediaObj.src;
+                 return "<div class='embed-responsive embed-responsive-16by9'><iframe class='embed-responsive-item' src='https://www.youtube.com/embed/"+mediaObj.src+"?rel=0' allowfullscreen></iframe></div>";
+             }
+             else {
+                 return "<img class='carMedia' src='"+mediaObj.src+"' alt='"+mediaObj.label+"'>";
+             }
+         }
+        
+        
+         function openMediaModal(modId,carId,mediaId){
+             console.log(modId+","+carId+","+mediaId);
+             $('#'+modId).modal('show'); 
+             $('#'+carId).carousel(parseInt(mediaId));
+         }
+        
+         var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        
+         $.getJSON( "software.json", function(obj) {
+             
+            //Turn JSON object to array
+            objArray = $(obj.software).toArray();
+            
+            //Sort the array by year in decreasing order
+            objArray.sort(sortByProperty("month")).sort(sortByProperty("year")).reverse();
+            
+            for (i = 0; i < objArray.length; i++) { 
+                software = objArray[i];
+                //Software id
+                var softwareId = "software_"+ i.toString();
+                var modId = "mod_"+ i.toString();
+                var carId = "car_"+ i.toString();
+                // Create card container and name, main image, alias, and description.
+                $("#importJson").append("<div class='card m-3 shadow' id="+softwareId+"><div class='row no-gutters'><div class='mainGameImg'></div><div class='col'><div class='card-body'><div class='d-flex w-100 justify-content-between'><h5 class='card-title mb-0'>"+software.name+"</h5><small>"+months[software.month-1]+" "+software.year+"</small></div><div class='softAuthors mb-1 w-100'>by</div><div class='subtitle w-100 mb-3'></div><div class='softwareInfo mb-3'></div><p class='card-text'>"+software.description+"</p><div class='mediaVideo'></div><div class='overflow-auto'><div class='mediaRow row'></div></div></div></div></div></div>");
+                
+                //Software info
+                $("#"+softwareId+" .softwareInfo").append("<h6 class='my-1'>Application: <span class='font-weight-normal'>"+software.application+"</span></h6>");
+                $("#"+softwareId+" .softwareInfo").append("<h6 class='my-1'>Client: <span class='font-weight-normal'>"+software.client+"</span></h6>");
+                $("#"+softwareId+" .softwareInfo").append("<h6 class='my-1'>Language: <span class='font-weight-normal'>"+software.code+"</span></h6>");
+                
+                //Add main image media
+                $("#"+softwareId+" .mainGameImg").append("<button class= 'mediaBtn' onclick= 'openMediaModal(\""+modId+"\",\""+carId+"\",\"0\")'>"+addMediaThumb(software.images[0])+"</button>")
+                                
+                //Add subtitle if any
+                if(software.subtitle){
+                    $("#"+softwareId+" .subtitle").append("<h6><span class='text-muted'> "+software.subtitle+"</span></h6>");
+                }
+                
+                //Loop through authors
+                for(j = 0; j < software.collaborators.length; j++){
+                    author = software.collaborators[j];
+                    $("#"+softwareId+" .softAuthors").append(" <span id= 'author_"+softwareId+"_"+j.toString()+"' class='badge badge-dark badge-author' data-toggle='tooltip' title='"+author.role+"' data-placement='right''>"+author.name+"</span>");
+                    $("#author_"+softwareId+"_"+j.toString()).tooltip();
+                }
+                
+                //Add modal carousel for media of each game
+                $("body").append("<div class='modal fade' id='"+modId+"' tabindex='-1' role='dialog' aria-hidden='true'>  <div class='modal-dialog modal-dialog-centered modal-lg' role='document'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div id='"+carId+"' class='carousel slide mediaCar' data-ride='carousel'><ol class='carousel-indicators'></ol><div class='carousel-inner'></div><a class='carousel-control-prev' href='#"+carId+"' role='button' data-slide='prev'><span class='carousel-control-prev-icon' aria-hidden='true'></span><span class='sr-only'>Previous</span></a><a class='carousel-control-next' href='#"+carId+"' role='button' data-slide='next'><span class='carousel-control-next-icon' aria-hidden='true'></span><span class='sr-only'>Next</span></a></div></div></div></div>");
+                
+                //Loop through media of each software
+                for(j = 0; j < software.images.length; j++){
+                    media = software.images[j];
+                    var active = "";
+                    if (j==0){
+                        active = " active";
+                    }
+                    //Add the indicator button
+                    $("#"+carId+" .carousel-indicators").append("<li data-target='#"+carId+"' data-slide-to='"+j.toString()+"' class='"+active+"'></li>");
+                    
+                    //Add the media and the label
+                    $("#"+carId+" .carousel-inner").append("<div class='carousel-item"+active+"'>"+addMedia(media)+"<div class='carousel-caption d-none d-md-block'><h6>"+media.label+"</h6></div></div>");
+                    
+                }
+                
+                //Add game media images
+                for(j = 1; j < software.images.length; j++){
+                    media = software.images[j];
+                    $("#"+softwareId+" .mediaRow").append("<button class= 'mediaBtn' onclick= 'openMediaModal(\""+modId+"\",\""+carId+"\",\""+j.toString()+"\")'><div class='mediaCircle'>"+addMediaThumb(media)+"</div></button>");
+                }
+                
+                if(software.links){
+                    for(j = 0; j < software.links.length; j++){
+                        link = software.links[j];
+                        $("#"+softwareId+" .card-body").append("<a href='"+link.href+"' class='card-link' target='_blank'>"+link.label+"</a>");
+                    }
+                }
+                
+            }
+         })
+    </script>
+  </body>
+</html>
