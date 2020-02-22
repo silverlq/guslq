@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       
     <!-- My CSS -->
-    <link rel="stylesheet" href="..\common-css\guslq.css">
+    <link rel="stylesheet" href="..\common\guslq.css">
     <title>Research &amp; Publications</title>
   </head>
   <body class="bkg-wavy">
@@ -19,24 +19,23 @@
         <h1>Research &amp; Publications</h1>
     </div>
     
-    <div id="importJson" class="container pt-3 px-0 px-sm-2 px-md-3 px-lg-5">        
+    <div class="container-fluid bkg-wavy">
+        <div id="importJson" class="container pt-3 px-0 px-sm-2 px-md-3 px-lg-5">        
 
+        </div>
+
+
+        <br><br>
     </div>
-    
-      
-    <br><br>
     <div id="footer"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script> $(function(){ $("#header").load("../includes/include_header.html"); $("#footer").load("../includes/include_footer.html"); }); </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="..\common\guslq.js"></script>
     <script>
-         var sortByProperty = function (property) {
-            return function (x, y) {
-                return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
-            };
-         };
          $.getJSON( "research.json", function(obj) {
             //Turn JSON object to array
             objArray = $(obj.research).toArray();
@@ -54,7 +53,8 @@
                 
                 //Add lead author tag
                 if(item.main_author){
-                    $("#"+resId+" h6").append(" <span class='badge badge-pill badge-secondary'>Lead</span>");
+                    $("#"+resId+" h6").append(" <span class='badge badge-pill badge-secondary' data-toggle='tooltip' title='Gus LQ is the lead author of this material.' data-placement='right''>Lead</span>");
+                    $("#"+resId+" h6 .badge").tooltip();
                 }                                   
                 
                 //Add image to top-right corner of card                                    
