@@ -335,9 +335,11 @@
 
 .carMedia {
     display: block;
+    min-width: 30vw;
     max-width: 100%;
-    max-height: 100%;
-    min-width: 70%;
+    min-height: 30vh;
+    max-height: 80vh;
+    height: auto;
     margin: auto;
 }
 
