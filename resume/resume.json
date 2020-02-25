@@ -1,0 +1,87 @@
+{
+    "name":"Gustavo Lopes Queiroz",
+    "title":"Geospatial Developer",
+    "links":[],
+    "sections":
+    [
+        {
+            "name":"about",
+            "small":true,
+            "text":"I am a Geospatial Developer with an MSc in Geography and a background in Geology. My area of expertise is the automation and streamlining of geospatial workflows. My latest projects involve remote sensing applied to forest mensuration including machine learning procedures. Throughout my professional and academic life, I have developed dozens of geospatial tools ranging from simple conversion or descriptive tools to robust geomorphological analysis software."
+        },
+        {
+            "name":"technical skills",
+            "small":true,
+            "list": [
+                "Academic writing",
+                "GIS & remote sensing",
+                "Python, Arcpy",
+                "R, MATLAB",
+                "C#, HTML, CSS, Javascript",
+                "Machine learning",
+                "Multiprocessing",
+                "Database Query",
+                "Photoshop",
+                "3D Modelling"
+            ]
+        },
+        {
+            "name":"experience",
+            "subsections":
+            [
+                {
+                    "name": "GIS & RESEARCH TECHNICIAN",
+                    "place": "AGRG",
+                    "date": [2019,"present"],
+                    "text": "Remote sensing and GIS work (preparation, processing and analysis), geo-database management, geospatial software development. Writing reports and academic papers. Oral reports and presentations. Performing workshops."
+                },
+                {
+                    "name": "PROJECT LEAD & TEACHING ASSISTANT",
+                    "place": "UNIVERSITY OF CALGARY",
+                    "date": [2017,2019],
+                    "text": "Remote sensing research involving statistics, machine learning and programming tasks. Academic writing and publication. Oral presentations in events. Teaching labs and marking assignments."
+                },
+                {
+                    "name": "INTERN IN MINERAL EXPLORATION",
+                    "place": "VOTORANTIM",
+                    "date": [2014,2015],
+                    "text": "Geologic mapping, ore modelling, writing reports, database construction and maintenance, software development. Fieldwork."
+                },
+                {
+                    "name": "GIS & FIELD ASSISTANT",
+                    "place": "UNIVERSITY OF CALGARY",
+                    "date": [2014],
+                    "text": "Fieldwork and lab assistance, database development, UAV flight planning, software programming for GIS and applied geosciences."
+                },
+                {
+                    "name": "GIS & FIELD ASSISTANT",
+                    "place": "UFPR",
+                    "date": [2012,2013],
+                    "text": "Fieldwork and lab assistance, writing, GIS analysis and coding."
+                }
+            ]
+        },
+        {
+            "name":"education",
+            "subsections":
+            [
+                {
+                    "name": "MSC IN GEOGRAPHY",
+                    "place": "UNIVERSITY OF CALGARY",
+                    "date": ["SEPTEMBER 2019"],
+                    "text": "Graduate studies focusing on remote sensing and computer vision applied to forest mensuration on the boreal forest. My thesis is entitled “Remote Sensing Boreal Coarse Woody Debris”."
+                },
+                {
+                    "name": "BSC IN GEOLOGY",
+                    "place": "UNIVERSIDADE FEDERAL DO PARANA",
+                    "date": ["JANUARY 2016"],
+                    "text": "During my geology undergrad in Brazil I developed four geospatial tools which led to two published papers as main author and two papers as secondary author."
+                }
+            ]
+        },
+        {
+            "name":"about",
+            "text": "When not at work, I enjoy cycling, camping and socializing with friends in lively sessions of board games. I occasionally participate in game making marathons."
+        }
+    ]
+}

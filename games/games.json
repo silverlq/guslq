@@ -109,6 +109,39 @@
             ]
         },
         {
+            "name": "Collapsing mines of LUMDOOM",
+            "alias": "",
+            "event": "Ludum Dare",
+            "year": 2018,
+            "month": 8,
+            "authors": [{"name":"Gus LQ", "role":"Lead Developer"}],
+            "genre":"Puzzle Arcade",
+            "language": "English",
+            "engine": "Unity 3D",
+            "code": "C#",
+            "tags": ["solo","jam","original"],
+            "description":"A fierce dwarf miner must find his way out of the depths of the LUMDOOM mines before they collapse completely.",
+            "commentary":"I revisited the concept of shrinking space, originally from Beat That Dungeon (2013), while giving an homage to Dungeons and Dragons, and thus this game was born. It was the first time I implemented walking cycle animations myself to 3D models. Because the concept of the game is relatively simple, I was able to program the main mechanics quickly and dedicate most of my second jam day to producing many levels. People seemed to really enjoy playing this one. I was especially pleased with the cartoony aesthetic of the final product.",
+            "media_main":[
+                {"src":"GamesMedia\\lumdoom_1.png", "label":"Main character ready to delve into the mines"},
+                {"src":"GamesMedia\\lumdoom_2.png", "label":"Prision escape"},
+                {"src":"GamesMedia\\lumdoom_3.png", "label":"Gold carts puzzle"},
+                {"src":"GamesMedia\\lumdoom_4.png", "label":"Slimes and shrooms"}
+            ],
+            "media_extra":[],
+            
+            "competition":{
+                "context":"Rank out of 1056 games",
+                "awards":[
+                    "Top 1% graphics, Top 3% overall and theme","Top 4% audio"]
+            },
+            "youtube":"x4l3DItgyk8",
+            "links":[
+                {"label":"Download/Play", "href":"https://gamejolt.com/games/lumdoom/360826"},
+                {"label":"Jam Page", "href":"https://ldjam.com/events/ludum-dare/42/collapsing-mines-of-lumdoom"}
+            ]
+        },
+        {
             "name": "Beat That Dungeon",
             "alias": "",
             "event": "Global Game Jam",
