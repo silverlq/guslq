@@ -39,6 +39,7 @@
 .coverImage{
     width:100%;
     height:450px;
+    position: relative;
     text-align: center;
     overflow: hidden;
     border-bottom-style: solid;
@@ -95,13 +96,15 @@
     background-color: #D90754;
 }
 
-.coverImage img{
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.coverImage video{
     min-width: 100%;
     min-height: 100%;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
 }
 
 .coverMenu{
