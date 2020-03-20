@@ -142,6 +142,34 @@
             ]
         },
         {
+            "name": "Shark Turf",
+            "alias": "",
+            "event": "Ludum Dare",
+            "year": 2019,
+            "month": 4,
+            "authors": [{"name":"Gus LQ", "role":"Lead Developer"}],
+            "genre":"Arcade",
+            "language": "English",
+            "engine": "Unity 3D",
+            "code": "C#",
+            "tags": ["solo","jam","original"],
+            "description":"Clean the sea floor and avoid starvation in this upbeat shark adventure!",
+            "commentary":"Shark Turf started simply as a shark simulator, where you would hunt fish for survival and scare away competitors so that fish would not become too scarse in your pond. As the game jam progressed, I realized the main game loop needed fleshing out so I added the garbage cleaning element to it. I was inspired by Crash Bandicoot 3's water levels when designing the look of the game, and I am happy with how goofy and and cheerful the graphics turned out. It was the first time I made my own keyframe animations using mesh skeletons.",
+            "media_main":[
+                {"src":"GamesMedia\\st_1.jpg", "label":"Shark scaring away competition from its pond"},
+                {"src":"GamesMedia\\st_2.jpg", "label":"Underwater treasure hunt"},
+                {"src":"GamesMedia\\st_3.jpg", "label":"Spitting trash back into the bin"},
+                {"src":"GamesMedia\\st_4.jpg", "label":"Underwater fishing"}
+            ],
+            "media_extra":[],
+            
+            "youtube":"EUOsQuImfIA",
+            "links":[
+                {"label":"Download/Play", "href":"https://gamejolt.com/games/shark_turf/411168"},
+                {"label":"Jam Page", "href":"https://ldjam.com/events/ludum-dare/44/shark-turf"}
+            ]
+        },
+        {
             "name": "Beat That Dungeon",
             "alias": "",
             "event": "Global Game Jam",
