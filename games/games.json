@@ -147,7 +147,7 @@
             "event": "Ludum Dare",
             "year": 2019,
             "month": 4,
-            "authors": [{"name":"Gus LQ", "role":"Lead Developer"}],
+            "authors": [{"name":"Gus LQ", "role":"Developer"}],
             "genre":"Arcade",
             "language": "English",
             "engine": "Unity 3D",
@@ -197,6 +197,34 @@
             "youtube":"SJaxlTv9Xh0",
             "links":[
                 {"label":"Jam Page", "href":"http://2013.globalgamejam.org/2013/beat-dungeon"}
+            ]
+        },
+        {
+            "name": "Snoo's Quest to Antarctica",
+            "alias": "",
+            "event": "Ludum Dare",
+            "year": 2020,
+            "month": 4,
+            "authors": [{"name":"Gus LQ", "role":"Developer"}],
+            "genre":"Adventure",
+            "language": "English",
+            "engine": "Unity 3D",
+            "code": "C#",
+            "tags": ["solo","jam","original"],
+            "description":"Cute adventure game about helping a melting snowman to board a boat to Antarctica.",
+            "commentary":"I was only able to participate in this jam because my partner was kind enough to watch our baby, who also helped by taking some great naps. I chose an art style and game type that I knew I would be able to accomplish with more limited time, while still striving for a polished product I would be proud of. As always, I ended up working until the very last minute of the game jam, which was difficult this time around with a baby that requires constant attention. I am happy I made this, but I think it will be a while before I participate in another jam.",
+            "media_main":[
+                {"src":"GamesMedia\\Snoo1.png", "label":"Main characters"},
+                {"src":"GamesMedia\\Snoo2.jpg", "label":"Screenshot"},
+                {"src":"GamesMedia\\Snoo3.jpg", "label":"Screenshot"},
+                {"src":"GamesMedia\\Snoo4.jpg", "label":"Screenshot"},
+                {"src":"GamesMedia\\Snoo5.jpg", "label":"Screenshot"}
+            ],
+            "media_extra":[],
+            
+            "youtube":"allhg8ZbfzU",
+            "links":[
+                {"label":"Play Now", "href":"https://gamejolt.com/games/snoo/488029"}
             ]
         }
     ]
