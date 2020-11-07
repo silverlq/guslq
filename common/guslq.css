@@ -96,6 +96,32 @@
     background-color: #D90754;
 }
 
+.highlight-bar{
+    margin: 3rem auto 1.5rem auto;
+    max-width: 400px;
+    padding: 7px;
+    background-color: #011526;
+    text-align: center;
+    text-shadow: 1.5px 1.5px #D90754;
+    transform: skew(-20deg);
+}
+
+.highlight-bar h3{
+    font-variant: small-caps;
+    color: white;
+    margin: auto;
+}
+
+.highlight-image {
+    max-height: 450px;
+    overflow-y: hidden;
+}
+
+.highlight-image-slim {
+    max-height: 220px;
+    overflow-y: hidden;
+}
+
 .coverImage video{
     min-width: 100%;
     min-height: 100%;

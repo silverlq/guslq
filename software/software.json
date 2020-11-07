@@ -1,7 +1,7 @@
 {
     "software": [
         {
-            "name": "Seismic Line Mapper (SLM)",
+            "name": "Forest Line Mapper (FLM)",
             "subtitle": "A tool for enhanced delineation and attribution of linear disturbances in forests",
             "client": "Applied Geospatial Research Group",
             "application" : "Forestry management",
@@ -19,13 +19,13 @@
             ],
             "inputs":["Canopy Height Model (CHM)", "Regional-scale lines (1:10,000)"],
             "outputs":["Detailed seismic lines", "Detailed footprint polygons", "Line 3D spatial attributes"],
-            "description":"SLM is a series of script tools for facilitating the high-resolution mapping and studying of seismic lines (petroleum exploration corridors in forested areas) via processing canopy height models (LiDAR or photogrammetry derived raster images where pixel-values represent the ground-height of vegetation).",
+            "description":"FLM is a series of script tools for facilitating the high-resolution mapping and studying of forest lines (eg. roads, railways, seismic lines) via processing canopy height models (LiDAR or photogrammetry derived raster images where pixel-values represent the ground-height of vegetation).",
             "images":[
-                {"src":"media/slm_1.png", "label":"Mapped seismic line center and polygon footprint displayed over an RGB ortho-photo."},
-                {"src":"media/slm_2.png", "label":"Graphical user interface (GUI) of the SLM toolset."},
-                {"src":"media/slm_3.gif", "label":"Example image from the documentation available at the SLM website."}
+                {"src":"media/slm_1.png", "label":"Mapped forest line center and polygon footprint displayed over an RGB ortho-photo."},
+                {"src":"media/slm_2.png", "label":"Graphical user interface (GUI) of the FLM toolset."},
+                {"src":"media/slm_3.gif", "label":"Example image from the documentation available at the FLM website."}
             ],
-            "links": [{"label": "SLM Web Page", "href":"http://slm.beraproject.org/"}]
+            "links": [{"label": "FLM Web Page", "href":"http://flm.bera-project.org/"}]
         },
         {
             "name": "Knickpoint Finder",
