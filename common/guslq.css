@@ -258,9 +258,10 @@
 
 .resumeHeader{
     background-color: #011526;
-    margin: 74px 0px 15px 0px;
+    margin: 74px 0px 0px 0px;
     padding: 15px 15px 0px 15px;
     text-align: center;
+    box-shadow: -3px 3px 0 #D90754;
 }
 
 .resumeHeader .row .col-1{
@@ -268,7 +269,7 @@
 }
 @media (min-width: 768px) {
     .resumeHeader{
-        margin: 75px 40px 15px 100px;
+        margin: 75px 40px 0px 100px;
     }
     .resumeHeader .row .col-1{
         display: block;
@@ -285,6 +286,7 @@
   left: -50px;
   top : -35px;
   padding-top: 2.2em;
+  box-shadow: -3px 3px 0 #D90754;
 }
 
 .resume-circle h1{
@@ -298,6 +300,13 @@
     padding-left: 1em;
 }
 
+@media (min-width: 768px) {
+    .resume-list{
+        padding-left: 0em;
+    }
+
+}
+
 .resume-list ul li {
     margin-left: auto;
     display: list-item;
@@ -309,7 +318,8 @@
     height:10px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: #011526;   
+    background-color: #011526;
+    box-shadow: -2px 2px 0 #D90754;
 }
 
 .resume-text{
@@ -318,7 +328,7 @@
 }
 
 .resume-text p{
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 .resume-text h4{
@@ -327,6 +337,7 @@
 }
 
 .resume-text h3{
+    margin-top: 26px;
     margin-bottom: 6px;
 }
 
@@ -351,13 +362,28 @@
     }
 }
 
+.resume-link{
+    padding: 0;
+}
+
 .resume-link a img{
     width: 45px;
+    filter: opacity(70%);
 }
 
 .resume-link a h4{
-    color: black;
+    color: #011526;
     font-size: 1em;
+}
+
+.resume-link h4{
+    display: none;
+}
+
+@media (min-width: 576px){
+    .resume-link h4{
+        display: block;
+    }
 }
 
 .pageFooter {
