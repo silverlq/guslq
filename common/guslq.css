@@ -256,6 +256,16 @@
     padding: 50px 15px 30px 15px;
 }
 
+.btn-outline-primary{
+    color: #D90754;
+    border-color:#D90754;
+}
+
+.btn-outline-primary:hover{
+    background-color:#D90754;
+    border-color:#D90754;
+}
+
 .resumeHeader{
     background-color: #011526;
     margin: 74px 0px 0px 0px;
@@ -368,7 +378,6 @@
 
 .resume-link a img{
     width: 45px;
-    filter: opacity(70%);
 }
 
 .resume-link a h4{
