@@ -92,6 +92,19 @@
           "year": 2019,
           "crossref": "http://hdl.handle.net/1880/111027",
           "download": "Papers//thesis_2019_queiroz.pdf"
+        },
+        { "type": "Article",
+          "title": "The Forest Line Mapper: A Semi-Automated Tool for Mapping Linear Disturbances in Forests",
+          "author": "Queiroz, G.L., McDermid, G.J., Rahman, M.M., Linke, J.",
+          "journal": "Remote Sensing",
+          "logo": "Papers//logo_remotesensing.png",
+          "volume": 12,
+          "number": 24,
+          "main_author": true,
+          "pages": [4176],
+          "year": 2020,
+          "crossref": "https://doi.org/10.3390/rs12244176",
+          "download": "Papers//flm_2020_queiroz.pdf"
         }
     ]
 }
