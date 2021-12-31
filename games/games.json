@@ -248,7 +248,7 @@
                 {"src":"GamesMedia\\2021_Gun4.jpg", "label":"Screenshot"}
             ],
             "media_extra":[],
-            
+            "youtube":"",
             "links":[
                 {"label":"Play Now", "href":"https://gamejolt.com/games/Gunstable_Tanks/652423"},
                 {"label":"Jam Page", "href":"https://ldjam.com/events/ludum-dare/49/gunstable-tanks"},
