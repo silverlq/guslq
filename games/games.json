@@ -226,6 +226,34 @@
             "links":[
                 {"label":"Play Now", "href":"https://gamejolt.com/games/snoo/488029"}
             ]
+        },
+        {
+            "name": "Gunstable Tanks,
+            "alias": "",
+            "event": "Ludum Dare",
+            "year": 2021,
+            "month": 10,
+            "authors": [{"name":"Gus LQ", "role":"Developer"}],
+            "genre":"Arcade",
+            "language": "English",
+            "engine": "Unity 3D",
+            "code": "C#",
+            "tags": ["solo","jam","original"],
+            "description":"You are on a mission to destroy the enemy Master Tank. Come aboard your Gunstable Tank but beware, your guns can break!",
+            "commentary":"This one was created from scratch in about 12 hours of work (over a period of 48 hours). My personal objectives were to test my C# knowledge with concepts like inheritance, virtual methods and static classes as well as design an enjoyable bullet-hell gameplay.",
+            "media_main":[
+                {"src":"GamesMedia\\2021_Gun1.png", "label":"Title screen"},
+                {"src":"GamesMedia\\2021_Gun2.jpg", "label":"Screenshot"},
+                {"src":"GamesMedia\\2021_Gun3.jpg", "label":"Screenshot"},
+                {"src":"GamesMedia\\2021_Gun4.jpg", "label":"Screenshot"}
+            ],
+            "media_extra":[],
+            
+            "links":[
+                {"label":"Play Now", "href":"https://gamejolt.com/games/Gunstable_Tanks/652423"},
+                {"label":"Jam Page", "href":"https://ldjam.com/events/ludum-dare/49/gunstable-tanks"},
+                {"label":"Git Hub", "href":"https://github.com/silverlq/Gunstable-Tanks"}
+            ]
         }
     ]
 }
