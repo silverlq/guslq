@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="..\common\guslq.css">
     <title>Contact</title>
   </head>
-  <body class="darkBack">
-    <div id="header"></div>
+  <body id="resume-body" class="darkBack">
+    <div id="header" class="hideForPrinter"></div>
       
-    <div class="container-fluid bkg-wavy">
+    <div id="bkg-wavy" class="container-fluid bkg-wavy">
         
-        <div class="resumeHeader">
+        <div id="resumeHeader" class="resumeHeader darkWithShadow">
             <div class = "row">
                 <div class ="col-1">
-                    <div class ="resume-circle">
-                        <h1>GLQ</h1>
+                    <div id="resume-circle" class ="resume-circle darkWithShadow">
+                        <h1 class="turnGray">GLQ</h1>
                     </div>
                 </div>
                 <div class ="col text-center text-white">
-                    <h2>GUSTAVO LOPES QUEIROZ</h2>
-                    <p><small>GEOSPATIAL DEVELOPER | GUSLQ.COM</small></p>
+                    <h2 class="turnBlack">GUSTAVO LOPES QUEIROZ</h2>
+                    <p class="turnBlack"><small>GEOSPATIAL SOFTWARE DEVELOPER | GUSLQ.COM</small></p>
                 </div>
             </div>
         </div>
@@ -34,42 +34,41 @@
             <div class="row">
                 <div class="col pt-md-5 resume-text">
                     <h3>ABOUT</h3>
-                    <div class="resume-bar"></div>
-                    <p>I am a full-stack geospatial developer and scientist with an MSc in geography and a background in geology. My latest projects involve enterprise GIS software development as well as geodatabase maintenance and GIS support. Throughout my professional and academic life, I have developed dozens of geospatial tools ranging from simple conversion or descriptive scripts to elaborate computer-vision software driven by machine-learning.</p>
+                    <div class="resume-bar darkWithShadow"></div>
+                    <p>I am an experienced software developer with geospatial training and a passion for innovation. I have been developing software for various businesses since 2014 and over a decade for academic applications. My latest projects involve technical leadership, enterprise GIS software development as well as geodatabase maintenance and GIS support. I am a versatile professional having the capacity for leadership, full-stack development as well as advanced statistics including machine learning.</p>
                     <h3>TECHNICAL SKILLS</h3>
-                    <div class="resume-bar"></div>
+                    <div class="resume-bar darkWithShadow"></div>
                     <div class="resume-list">
-                        <ul>
-                            <li><b>Full-stack GIS</b> - GIS desktop, web apps, APIs, map services and geodatabase automation</li>
+                        <ul id="skills-list">
+                            <li><b>Software development</b> - desktop apps, web services, batch scripting and object-oriented programming</li>
                             <li><b>Communication skills</b> - award-winning written and oral communication </li>
-                            <li><b>C#</b> (.NET) - desktop, GIS, class library, API</li>
-                            <li><b>Python</b> - GIS (arcpy, qgis) and data analysis</li>
+                            <li><b>C# and Python</b> - desktop and console apps, class libraries, APIs, GIS scripts</li>
                             <li><b>HTML, CSS,  Javascript</b> - front-end web development</li>
-                            <li><b>GIT</b> - version control and information tracking</li>
-                            <li><b>GIS analysis</b> - mapping, analysis and data management</li>
-                            <li><b>Remote sensing</b> - mapping, analysis, computer-vision</li>
+                            <li><b>Database support</b> - ETL, SQL, object relational mapping</li>
+                            <li><b>GIS</b> - mapping, spatial analysis, web services, geodatabase management</li>
+                            <li><b>Remote sensing</b> - point-cloud and raster analysis, computer-vision</li>
                             <li><b>Interactive media</b> - game development, 3D modelling, graphics editing</li>
-                            <li><b>Machine learning</b> - data preparation, training, testing</li>
-                            <li><b>R, MATLAB</b> - statistical analysis</li>
+                            <li><b>Machine learning</b> - data preparation, training and testing ML models</li>
+                            <li><b>R, MATLAB</b> - statistical analysis, graphs</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-12 col-md-8 resume-text">
                     <h3>EXPERIENCE</h3>
-                    <div class="resume-bar"></div>
+                    <div class="resume-bar darkWithShadow"></div>
                     <h4>GIS ANALYST <div class="dot"></div> CGG <div class="dot"></div> 2020 - PRESENT</h4>
-                    <p>Full-stack development (front-end, framework, API) of geospatial enterprise software as well as geodatabase maintenance and GIS support. Some leadership experience on software development projects.</p>
+                    <p>Full-stack C# development of geospatial enterprise software including front-end, framework, API, batch scripting as well as geodatabase maintenance and GIS support. Some leadership experience on software development projects.</p>
                     <h4>GIS TECHNICIAN <div class="dot"></div> AGRG <div class="dot"></div> 2019 - 2020</h4>
-                    <p>Geospatial software development, remote sensing (point clouds, imagery), GIS support and geo-database management. Writing reports and academic papers. Oral reports and presentations. Performing workshops.</p>
+                    <p>Geospatial software development (Python), remote sensing (point clouds, imagery), GIS support and geo-database management. Writing reports and academic papers. Oral reports and presentations. Performing workshops.</p>
                     <h4>RESEARCH & TEACHING ASSISTANT <div class="dot"></div> UOFC <div class="dot"></div> 2017 - 2019</h4>
-                    <p>Remote sensing research involving statistics, machine learning and programming tasks. Academic writing and publication. Oral presentations in events. Teaching labs and marking assignments.</p>
+                    <p>Remote sensing research involving programming, statistics and machine learning tasks. Academic writing and publication. Oral presentations in events. Teaching labs and marking assignments.</p>
                     <h4>INTERN IN MINERAL EXPLORATION<div class="dot"></div> VOTORANTIM <div class="dot"></div> 2014 - 2015</h4>
-                    <p>Geologic mapping, ore modelling, writing reports, database construction and maintenance, software development. Fieldwork.</p>
+                    <p>Geologic mapping and ore modelling including fieldwork, software development, writing reports, database design and maintenance.</p>
                     <h3>EDUCATION</h3>
-                    <div class="resume-bar"></div>
+                    <div class="resume-bar darkWithShadow"></div>
                     <h4>MSC IN GEOGRAPHY <div class="dot"></div> 2017 - 2019 <div class="dot"></div> UNIVERSITY OF CALGARY</h4>
                     <p class="mb-1">Graduate studies focusing on remote sensing and computer vision applied to forest mensuration on the boreal forest. My thesis is entitled “Remote Sensing Boreal Coarse Woody Debris”.</p>
-                    <div class="mb-3">
+                    <div class="mb-3 hideForPrinter">
                         <p>
                           <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#collapseMSc" role="button" aria-expanded="false" aria-controls="collapseMSc">
                             Awards and Scholarship
@@ -92,7 +91,7 @@
                     </div>
                     <h4>BSC IN GEOLOGY <div class="dot"></div> 2009 - 2016 <div class="dot"></div> UNIVERSIDADE FEDERAL DO PARANÁ</h4>
                     <p class="mb-1">During my geology undergrad in Brazil I developed four geospatial tools which led to two published papers as main author and two papers as secondary author.</p>
-                    <div class="mb-3">
+                    <div class="mb-3 hideForPrinter">
                         <p>
                           <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#collapseBSc" role="button" aria-expanded="false" aria-controls="collapseBSc">
                             Scholarship
@@ -109,7 +108,7 @@
                     </div>
                     <h4>BSC EXCHANGE PROGRAM <div class="dot"></div> 2013 - 2014 <div class="dot"></div> UNIVERSITY OF CALGARY</h4>
                     <p class="mb-1">One-year exchange program in Geology with a summer internship in Geography.</p>
-                    <div class="mb-3">
+                    <div class="mb-3 hideForPrinter">
                         <p>
                           <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#collapseExc" role="button" aria-expanded="false" aria-controls="collapseExc">
                             Scholarship
@@ -126,7 +125,7 @@
                         </div>              
                     </div>
                     <h3>EXTRA</h3>
-                    <div class="resume-bar"></div>
+                    <div class="resume-bar darkWithShadow"></div>
                     <p>When not at work, I enjoy cycling, camping, stargazing and socializing with friends in lively sessions of board games. I occasionally participate in game making marathons.</p>
                 </div>
             </div>
@@ -134,6 +133,11 @@
                 <div class="col resume-link"><a href="http://www.guslq.com"><img src ="media/icon-home.svg"/><h4>guslq.com</h4></a></div>
                 <div class="col resume-link"><a href="mailto:gus@guslq.com"><img src ="media/icon-mail.svg"/><h4>gus@guslq.com</h4></a></div>
                 <div class="col resume-link"><a href="https://www.linkedin.com/in/guslq/"><img src ="media/icon-user.svg"/><h4>linkedin.com/in/guslq</h4></a></div>
+            </div>
+            <div class="row text-center mt-2 pb-4 hideForPrinter">
+                <div class="col">
+                    <button class="btn btn-sm btn-outline-primary" onclick="printerFriendly()">Printer-friendly version</button>
+                </div>
             </div>
         </div>
     </div>
@@ -145,6 +149,35 @@
     <script> $(function(){ $("#header").load("../includes/include_header.html"); $("#footer").load("../includes/include_footer.html"); }); </script> 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script>
+        function printerFriendly() {
+            //Hide specific elements
+            var eles = document.getElementsByClassName('hideForPrinter');
+            for (var ele of eles) {
+                ele.style.display = 'none';
+            }
+            //Turn off background texture
+            var bkgWavy = document.getElementById("bkg-wavy");
+            bkgWavy.style.borderWidth = 0;
+            bkgWavy.style.backgroundColor = "white";
+            //Turn background white
+            var bkg = document.getElementById("resume-body");
+            bkg.style.backgroundColor = "white";
+            //Turn dark elements light gray
+            var darks = document.getElementsByClassName('darkWithShadow');
+            for (var dark of darks) {
+                dark.style.boxShadow = '0px 0px';
+            }
+            //Reduce header size
+            var header = document.getElementById("resumeHeader");
+            header.style.marginRight = "auto";
+            header.style.marginLeft = "auto";
+            header.style.width = "600px";
+            //Adjust list padding
+            var list = document.getElementById("skills-list");
+            list.style.paddingLeft = "12px";
+        }
+      </script>
     
   </body>
 </html>
